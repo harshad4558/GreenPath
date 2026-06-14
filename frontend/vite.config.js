@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       // REST API traffic
       '/api': {
-        target: 'http://localhost:5000',
+        target:,VITE_API_URL,
         changeOrigin: true,
         secure: false,
       },
