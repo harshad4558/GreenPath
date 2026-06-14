@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { User, UserPreferences } from "../entities/UserAndPreferences.js";
+import { User, UserPreferences } from "../entities/UserAndPreferences.ts";
 import { EVStation } from "../entities/EVStation.js";
 import { Trip } from "../entities/Trip.js";
 import { Route } from "../entities/Route.js";
