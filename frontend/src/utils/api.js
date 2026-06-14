@@ -1,8 +1,38 @@
+// import axios from "axios";
+
+// // Create Axios instance with proxy base path
+// const api = axios.create({
+//   baseURL: "/api",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
+
+// // Request interceptor to automatically attach authorization header
+// api.interceptors.request.use(
+//   (config) => {
+//     const token = localStorage.getItem("greenpath_token");
+//     if (token) {
+//       config.headers.Authorization = `Bearer ${token}`;
+//     }
+//     return config;
+//   },
+//   (error) => {
+//     return Promise.reject(error);
+//   }
+// );
+
 import axios from "axios";
 
-// Create Axios instance with proxy base path
+// 🟢 DYNAMIC PRODUCTION BASE URL CONFIGURATION
+// If VITE_API_URL is available (on Render), append /api. Otherwise, use local proxy relative path.
+const API_BASE_URL = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : "/api";
+
+// Create Axios instance with dynamic base path
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
