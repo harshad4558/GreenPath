@@ -1,5 +1,6 @@
 # GreenPath: Sustainable Transit Hub & Route Planner 🍃
 
+# Live Link = 'https://greenpath-frontend.onrender.com/'
 GreenPath is a comprehensive, modern web platform designed to promote eco-friendly transportation and reduce carbon footprints. Unlike standard navigation tools that prioritize only travel speed, GreenPath uses a multi-criteria optimization formula balancing **Carbon Emissions**, **Time**, and **Cost**. It gamifies sustainability by tracking user impact, providing live AI-driven alerts, and dynamically adjusting routes based on real-world constraints.
 
 ---
